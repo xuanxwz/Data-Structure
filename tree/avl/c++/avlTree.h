@@ -121,8 +121,9 @@ private:
 
     void RR(Node *&t) {
         Node *temp = t->right;
-        t->right = temp->right;
+        t->right = temp->left;
         temp->right = t;
+        // 更新平衡因子
         t->height = max(height(t->left), height(t->height)) + 1;
         temp->height = max(height(temp->left), height(temp->right)) + 1;
         t = temp;

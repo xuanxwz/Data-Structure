@@ -16,10 +16,6 @@ void getNext(const string &t, int *next) {
     while (i < t.size() - 1) {
         if ((j == -1) || (t[i] == t[j])) {
             ++i, ++j;
-//            if(t[i] != t[j])
-//                next[i] = j;
-//            else
-//                next[i] = next[j];
             next[i] = j;
         } else {
             j = next[j];
